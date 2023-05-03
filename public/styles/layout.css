@@ -33,6 +33,11 @@ main.container {
 
 }
 
+.counterLimit {
+  /* Class of the counter will Add to counterLimit Class if the char. count is over 140 */
+  color: red;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
