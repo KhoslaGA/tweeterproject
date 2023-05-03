@@ -14,8 +14,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
--Body-parser
--md5
--
+-Express
+-Nodejs
+body-parser
+chance
+md5
+mongodb
