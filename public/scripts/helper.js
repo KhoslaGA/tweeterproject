@@ -1,5 +1,5 @@
 //=============Tweet Handling =====================================================
-const loadTweets = function(action) {
+const loadTweets = function (action) {
   //GET the latest Tweet
   $.ajax("/tweets/")
     .then(res => {
@@ -7,7 +7,7 @@ const loadTweets = function(action) {
     });
 };
 
-const createTweetElement = function(post) {
+const createTweetElement = function (post) {
   // Not a good way of doing it, should break down into chunks
 
   const $tweet = $(`
@@ -31,7 +31,7 @@ const createTweetElement = function(post) {
   $('#tweets-container').prepend($tweet);
 };
 
-const renderTweets = function(inputData) {
+const renderTweets = function (inputData) {
   // empty then in sectoin
   $('#tweets-container').empty();
   // Reverses JSON to give newest first (should be switchable)
@@ -43,7 +43,7 @@ const renderTweets = function(inputData) {
 
 const fetchAndUpdateAll = () => loadTweets(renderTweets);
 
-const validateAndSubmit = function() {
+const validateAndSubmit = function () {
 
   $("#inputError").hide('slow');
   const input = $("#tweet-text").val();
@@ -69,7 +69,7 @@ const validateAndSubmit = function() {
   }
 };
 
-const escapeStr = function(str) {
+const escapeStr = function (str) {
   // Cross Site Script Couter-measure
   let p = document.createElement('p');
   p.appendChild(document.createTextNode(str));
@@ -77,7 +77,7 @@ const escapeStr = function(str) {
 };
 
 //==================== Page Handling ==========================================
-const initializePage = function() {
+const initializePage = function () {
   //Hide New Tweet area and Input Error Message
   $("#inputError").hide();
   $(".new-tweet").hide();
@@ -89,9 +89,9 @@ const resetTextBox = () => {
   $('output.counter').val(140);
 };
 
-const rtnToTopTrigger = function() {
+const rtnToTopTrigger = function () {
   // Show/Hide Button on scroll Button
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(window).scrollTop() > 50) {
       $("#topButton").show("slow");
     } else {
@@ -100,9 +100,9 @@ const rtnToTopTrigger = function() {
   });
 }
 
-const closeTweetInputScroll = function() {
+const closeTweetInputScroll = function () {
   // Closes Tweet Box if you scroll out of view (approx 2-3 tweets deep)
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(window).scrollTop() > 700) {
       $(".new-tweet").hide()
     }
@@ -110,7 +110,7 @@ const closeTweetInputScroll = function() {
 }
 
 //==================== Click Actions ==========================================
-const toggleTweetInputClick = function() {
+const toggleTweetInputClick = function () {
   $('.navButton').on('click', () => {
     $(".new-tweet").animate({
       height: "toggle",
@@ -121,15 +121,15 @@ const toggleTweetInputClick = function() {
     $('textarea').focus();
   });
 }
-
-const postTweetClick = function() {
+// poast tweet function
+const postTweetClick = function () {
   $('form button').on('click', event => {
     event.preventDefault();
     validateAndSubmit();
   });
 }
 
-const rtnToTopClick = function() {
+const rtnToTopClick = function () {
   //Rtn to Top on Click
   $('#topButton').on('click', () => {
     $('html, body').animate({ scrollTop: 0 }, '300');
