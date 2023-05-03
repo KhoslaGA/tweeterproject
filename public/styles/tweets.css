@@ -1,0 +1,84 @@
+#tweets-container {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 90%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: bold;
+}
+
+#tweets-container article {
+  height: 100%;
+  width: 95%;
+  border: 3px solid #545149;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#tweets-container .hide {
+  /* Hides User name until Article:hover is active */
+  display: none;
+}
+
+#tweets-container article:hover .hide {
+  /* Targets the hande and makes it re-appear*/
+  display: flex;
+}
+
+#tweets-container article:hover {
+  /* Only adds shadow to the article */
+  box-shadow: 1px 8px 20px grey;
+  transition: box-shadow .2s ease-in;
+}
+
+#tweets-container header {
+  height: 50%;
+  width: 98%;
+  padding: .5rem;
+  flex-grow: 2;
+  background-color: #f4f1ec;
+  background-image: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#tweets-container header span{
+  display:flex;
+  flex-direction: row;
+}
+
+#tweets-container img {
+  height: 4rem;
+}
+
+#tweets-container p.tweet-contents {
+  height: 40%;
+  width: 98%;
+  margin: 0;
+  padding: .5rem;
+  overflow-wrap: break-word;
+}
+
+#tweets-container footer {
+  border-top: 5px solid #545149;
+  height: 10%;
+  width: 98%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#tweets-container footer>span.icons {
+  color: #4056a1;
+}

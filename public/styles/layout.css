@@ -3,14 +3,13 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 /*
@@ -18,26 +17,59 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-}
-
-main.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #545149;
-
-
-}
-
-.counterLimit {
-  /* Class of the counter will Add to counterLimit Class if the char. count is over 140 */
-  color: red;
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+.hoverBtn:hover{
+    cursor: pointer;
+    color: gray
+}
+
+header {
+    margin: 0;
+}
+
+main.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #545149;
+  
+}
+
+.lgDisplay{
+width: 100%;
+}
+
+
+
+#topButton {
+    color: white;
+    font-size: 3rem;
+    background-color: red;
+    border-radius: 50%;
+    border: 0px solid red;
+    padding: 20px;
+    position: fixed;
+    bottom: 4rem;
+    right: 3rem;
+    display: none;
+}
+
+
+#topButton:hover {
+    box-shadow: 1px 8px 20px grey;
+    background-color: grey;
+    transition: box-shadow .2s ease-in;
+}
+

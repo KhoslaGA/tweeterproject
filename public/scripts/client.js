@@ -1,23 +1,25 @@
 /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+* Client-side JS logic goes here
+* jQuery is already loaded
+* Reminder: Use (and do all your DOM work in) jQuery's document ready function
+*/
 
 $(document).ready(function () {
-    initializePage();
+  initializePage();
 
-    fetchAndUpdateAll();
+  fetchAndUpdateAll();
 
-    postTweetClick()
+  postTweetClick()
 
-    toggleTweetInputClick();
+  toggleTweetInputClick();
 
-    rtnToTopTrigger();
+  rtnToTopTrigger();
 
-    rtnToTopClick();
+  rtnToTopClick();
 
-    closeTweetInputScroll();
-
+  closeTweetInputScroll();
+  
 
 });
+
+
